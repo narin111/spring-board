@@ -3,6 +3,7 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired // 스프링컨테이어에 있는 레포지토리 서비스에 주입해줌
     public MemberService(MemberRepository memberRepository){
         // 외부에서 넣어주도록
         this.memberRepository = memberRepository;
