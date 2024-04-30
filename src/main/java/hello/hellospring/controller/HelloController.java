@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-    @GetMapping("hello")
+    @GetMapping("/api/hello")
     public String hello(Model model) {
         model.addAttribute("data", "hello");
         return "hello"; // hello라는 화면 실행해라
